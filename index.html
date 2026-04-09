@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KAMSH TECH - Premium Agency</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#0a0a0a;color:#fff}
+
+header{position:fixed;width:100%;top:0;display:flex;justify-content:space-between;align-items:center;padding:20px 60px;background:#000;border-bottom:1px solid gold;z-index:1000}
+header h1{color:gold}
+nav a{color:white;margin-left:25px;text-decoration:none;transition:.3s}
+nav a:hover{color:gold}
+
+.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(to right,#000,#111)}
+.hero h2{font-size:65px;color:gold;animation:fadeIn 2s}
+.hero p{margin:20px 0;color:#ccc;font-size:18px}
+
+.btn{padding:14px 30px;border:1px solid gold;color:gold;text-decoration:none;border-radius:30px;transition:.3s}
+.btn:hover{background:gold;color:black}
+
+section{padding:100px 60px}
+.title{text-align:center;color:gold;margin-bottom:50px;font-size:34px}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.about img{width:100%;border-radius:20px}
+
+/* SERVICES */
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
+.card{background:#111;padding:30px;border-radius:20px;border:1px solid #222;transition:.4s}
+.card:hover{transform:translateY(-10px);border:1px solid gold}
+
+/* COUNTER */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;text-align:center}
+.stats div{background:#111;padding:30px;border-radius:15px}
+.stats h2{color:gold;font-size:40px}
+
+/* PORTFOLIO */
+.portfolio{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.portfolio div{background:#111;height:180px;border-radius:15px;display:flex;align-items:center;justify-content:center;color:#888}
+
+/* CONTACT */
+.contact{text-align:center}
+
+/* FOOTER */
+footer{text-align:center;padding:20px;border-top:1px solid gold}
+
+/* CHATBOT */
+.chatbot{position:fixed;bottom:20px;right:20px}
+.chat-btn{background:gold;color:black;padding:12px 20px;border-radius:50px;cursor:pointer}
+.chat-box{display:none;width:260px;height:320px;background:#111;border:1px solid gold;border-radius:15px;margin-top:10px;padding:10px;overflow:auto}
+
+@keyframes fadeIn{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+<body>
+
+<header>
+<h1>KAMSH TECH</h1>
+<nav>
+<a href="#">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<h2>Digital Solutions Agency</h2>
+<p>Websites • Apps • AI Automation for Business Growth</p>
+<a href="#contact" class="btn">Start Project</a>
+</section>
+
+<section id="about">
+<h2 class="title">About KAMSH TECH</h2>
+<div class="about">
+<div>
+<p>We help businesses grow with modern technology including websites, mobile apps and AI chatbots. Our focus is automation, performance and premium design.</p>
+</div>
+<div>
+<img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c">
+</div>
+</div>
+</section>
+
+<section class="stats">
+<div><h2>50+</h2><p>Projects</p></div>
+<div><h2>30+</h2><p>Clients</p></div>
+<div><h2>2+</h2><p>Years Experience</p></div>
+</section>
+
+<section id="services">
+<h2 class="title">Our Services</h2>
+<div class="services">
+<div class="card"><h3>Web Development</h3><p>Business & E-commerce websites</p></div>
+<div class="card"><h3>Android Apps</h3><p>Modern mobile apps</p></div>
+<div class="card"><h3>AI Chatbots</h3><p>WhatsApp automation</p></div>
+<div class="card"><h3>Web Applications</h3><p>Dashboards & systems</p></div>
+</div>
+</section>
+
+<section id="portfolio">
+<h2 class="title">Our Portfolio</h2>
+<div class="portfolio">
+<div>Glaucoma Detection using AI</div>
+<div>Doctor Appointments Booking</div>
+<div>Chatbot For Hotel Quries</div>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<h2 class="title">Contact Us</h2>
+<p><b>MUHAMMAD KAMRAN</b></p>
+<p>+92 302 6920851</p>
+<p>Kamran.shamakhan@gmail.com</p>
+<br>
+<a href="https://wa.me/923026920851" class="btn">Chat on WhatsApp</a>
+</section>
+
+<footer>
+<p>© 2026 KAMSH TECH | Premium Agency</p>
+</footer>
+
+<div class="chatbot">
+<div class="chat-btn" onclick="toggleChat()">Chat</div>
+<div class="chat-box" id="chatBox">
+<p><b>Bot:</b> Hello! Ask about services.</p>
+</div>
+</div>
+
+<script>
+function toggleChat(){
+let box=document.getElementById('chatBox');
+box.style.display = box.style.display==='block'?'none':'block';
+}
+</script>
+
+</body>
+</html>
